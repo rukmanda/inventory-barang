@@ -4,7 +4,7 @@
 // Check if user is logged in and check their role
 if (isset($_SESSION['username'])) {
     $username = $_SESSION['username']; // Username from session
-    $role = $_SESSION['level_danur']; // User role (admin or user)
+    $role = $_SESSION['level']; // User role (admin or user)
 } else {
     $username = "Guest"; // Display "Guest" if not logged in
     $role = ""; // No role if not logged in
@@ -17,7 +17,7 @@ if (isset($_SESSION['username'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MobilKu Dashboard</title>
+    <title>Gudangku Dashboard</title>
     <!-- Bootstrap CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -55,7 +55,7 @@ if (isset($_SESSION['username'])) {
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
-            <a class="navbar-brand" href="../beranda.php"><i class="fas fa-car-side me-2"></i>Gudang KU</a>
+            <a class="navbar-brand" href=" beranda.php"><i class="fas fa-car-side me-2"></i>Gudang KU</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -69,7 +69,7 @@ if (isset($_SESSION['username'])) {
 
                     <!-- Logout Button -->
                     <a class="btn btn-danger" onclick="return confirm('Apakah Anda yakin ingin keluar?')"
-                        href="../logout.php">Logout</a>
+                        href="logout.php">Logout</a>
             </div>
         </div>
     </nav>
